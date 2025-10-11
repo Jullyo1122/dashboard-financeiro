@@ -1,0 +1,65 @@
+<div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Navegação">
+      <div class="brand">Navbar</div>
+
+      <nav class="nav-list" role="navigation">
+        <a class="nav-item" href="#">
+          <span class="icon">🏠</span>
+          <span class="label">Home</span>
+        </a>
+
+        <a class="nav-item" href="#">
+          <span class="icon">🔐</span>
+          <span class="label">Autenticação</span>
+        </a>
+
+        <a class="nav-item" href="#">
+          <span class="icon">💾</span>
+          <span class="label">Salvar</span>
+        </a>
+
+        <a class="nav-item" href="#">
+          <span class="icon">📁</span>
+          <span class="label">Importar Dados</span>
+        </a>
+
+        <a class="nav-item" href="#">
+          <span class="icon">💬</span>
+          <span class="label">Mensagem</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="top-left">
+        <div class="page-title">Dashboard</div>
+
+        <div class="search" role="search" aria-label="Pesquisar">
+          <span style="opacity:0.7;">🔎</span>
+          <input type="search" placeholder="Pesquisar..." />
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <div class="icon-btn" title="Notificações">🔔</div>
+        <div class="icon-btn" title="Configurações">⚙️</div>
+        <div class="icon-btn" title="Sair">⤴️</div>
+      </div>
+    </header>
+
+    <!-- CONTENT PRINCIPAL (SEM QUADRADOS CENTRAIS) -->
+    <main class="content">
+      <div class="cards">
+        <button class="welcome" id="meta">Meta<input type="number" id="inp-num" [value]="metricValue" readonly></button>
+        <button class="welcome" id="total">Faturamento total<input type="number" id="inp-num" [value]="metricValue" readonly></button>
+        <button class="welcome" id="vendas">Vendas<input type="number" id="inp-num" [value]="metricValue" readonly></button>
+        <button class="welcome" id="nvclient">Novos Clientes<input type="number" id="inp-num" [value]="metricValue" readonly></button>
+        <button class="welcome" id="tick">Ticket médio<input type="number" id="inp-num" [value]="metricValue" readonly></button>
+      </div>
+      <div echarts [options]="chartOption" class="empty-area" aria-hidden="true" id="empty-area2" [autoResize]="true"></div>
+      <div echarts [options]="chartOption2" class="empty-area3" id="empty-area4"></div>
+      <div echarts [options]="chartOption3" class="empty-area5" id="empty-area6"></div>
+    </main>
+</div>

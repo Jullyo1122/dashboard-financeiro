@@ -1,0 +1,26 @@
+<main class="card" role="main">
+    <div class="brand">
+        <div class="logo">JP</div>
+        <div>
+            <h1>Entrar na sua conta</h1>
+            <p class="lead">Acesse com seu e‑mail e senha para continuar.</p>
+        </div>
+    </div>
+    <form onsubmit="handleSubmit(event)">
+        <div class="input">
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="text" placeholder="seu@exemplo.com" autocomplete="email" required />
+        </div>
+        <div class="input">
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+        <div class="row">
+            <label class="checkbox"><input type="checkbox" id="remember" /> Manter conectado</label>
+            <a class="forgot" href="#">Esqueci a senha</a>
+        </div>
+        <button class="btn" type="submit">Entrar</button>
+        <p class="alt">Ou continue com <a href="#">Google</a> / <a href="#">GitHub</a></p>
+        <p class="hint">Não tem conta? <a href="#">Crie uma gratuitamente</a></p>
+    </form>
+</main>

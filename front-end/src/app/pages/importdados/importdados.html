@@ -1,0 +1,58 @@
+<main class="card" role="main">
+  <header class="brand">
+    <div class="logo">JP</div>
+    <div class="title-group">
+      <h1>Importar dados para métricas</h1>
+      <p class="lead">
+        Envie arquivos Excel ou conecte ao banco de dados para atualizar seu dashboard.
+      </p>
+    </div>
+  </header>
+
+  <form onsubmit="handleImport(event)">
+    <fieldset>
+      <legend><i class="fa-solid fa-file-excel"></i> Importar arquivo Excel</legend>
+      <div class="input">
+        <label for="excel-file">Selecione o arquivo Excel (.xlsx, .xls)</label>
+        <input id="excel-file" name="excel-file" type="file" accept=".xlsx,.xls" required />
+      </div>
+      <button class="btn primary" type="submit">
+        <i class="fa-solid fa-upload"></i> Importar arquivo
+      </button>
+    </fieldset>
+    <fieldset>
+      <legend><i class="fa-solid fa-database"></i> Conectar ao banco de dados</legend>
+
+      <div class="input-grid">
+        <div class="input">
+          <label for="db-host">Host</label>
+          <input id="db-host" name="db-host" type="text" placeholder="ex: localhost" required />
+        </div>
+        <div class="input">
+          <label for="db-port">Porta</label>
+          <input id="db-port" name="db-port" type="number" placeholder="ex: 5432" required />
+        </div>
+      </div>
+
+      <div class="input-grid">
+        <div class="input">
+          <label for="db-user">Usuário</label>
+          <input id="db-user" name="db-user" type="text" placeholder="ex: admin" required />
+        </div>
+        <div class="input">
+          <label for="db-password">Senha</label>
+          <input id="db-password" name="db-password" type="password" placeholder="••••••••" required />
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="db-name">Nome do banco</label>
+        <input id="db-name" name="db-name" type="text" placeholder="ex: dashboard_db" required />
+      </div>
+
+      <button class="btn secondary" type="submit">
+        <i class="fa-solid fa-plug"></i> Conectar e importar
+      </button>
+    </fieldset>
+  </form>
+</main>

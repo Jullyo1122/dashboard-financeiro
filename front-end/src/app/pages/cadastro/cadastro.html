@@ -1,0 +1,36 @@
+<main class="card" role="main">
+    <div class="brand">
+        <div class="logo">JP</div>
+        <div>
+            <h1>Criar conta</h1>
+            <p class="lead">Crie uma conta gratuita para começar.</p>
+        </div>
+    </div>
+    <form onsubmit="handleSubmit(event)">
+        <div class="input">
+            <label for="name">Nome completo</label>
+            <input id="name" name="name" type="text" placeholder="Seu nome completo" autocomplete="name" required />
+        </div>
+        <div class="input">
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="text" placeholder="seu@exemplo.com" autocomplete="email" required />
+        </div>
+        <div class="input">
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="new-password" required />
+        </div>
+        <div class="input">
+            <label for="confirm-password">Confirmar senha</label>
+            <input id="confirm-password" name="confirm-password" type="password" placeholder="••••••••" autocomplete="new-password" required />
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" id="terms" required />
+                Aceito os <a href="#" style="color: var(--mint); text-decoration: underline;">termos de uso</a> e política de privacidade
+            </label>
+        </div>
+        <button class="btn" type="submit">Criar conta</button>
+        <p class="alt">Ou continue com <a href="#">Google</a> / <a href="#">GitHub</a></p>
+        <p class="hint">Já tem conta? <a href="#">Entre aqui</a></p>
+    </form>
+</main>

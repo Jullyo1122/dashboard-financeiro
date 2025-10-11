@@ -1,0 +1,131 @@
+:root {
+    --bg-dark: #04052E;
+    --topbar: #140152;
+    --accent: #22007C;
+    --panel: #E5F4E3;
+    --button-bg: #1e0a3f;
+    --muted: #bdbdbd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: #E5F4E3;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--topbar);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.btn-add {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: var(--button-bg);
+}
+
+.table-container {
+    background-color: var(--panel);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #E5F4E3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: var(--accent);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: rgba(34, 0, 124, 0.1);
+}
+
+.status {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.status.ativo {
+    color: #155724;
+}
+
+.status.inativo {
+    color: #721c24;
+}
+
+.edit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit:hover {
+    background-color: #218838;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+.td-diferen{
+  text-align: center;
+  
+}
+
+/* Classe text-muted original, mas atualizada para usar variável */
+.text-muted {
+    color: var(--muted);
+}

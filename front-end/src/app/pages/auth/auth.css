@@ -1,0 +1,183 @@
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(2, 1, 10, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px) saturate(110%);
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--mint);
+    font-size: 20px;
+    box-shadow: 0 4px 18px rgba(34, 0, 124, 0.28);
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+}
+
+p.lead {
+    color: rgba(229, 244, 227, 0.86);
+    font-size: 13px;
+    margin-bottom: 18px
+}
+
+form {
+    display: grid;
+    gap: 12px
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+label {
+    font-size: 12px;
+    color: rgba(229, 244, 227, 0.78)
+}
+
+input[type="text"],
+input[type="password"] {
+    background: linear-gradient(180deg, var(--glass), var(--glass-2));
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: var(--mint);
+    outline: none;
+    font-size: 14px;
+    transition: box-shadow .18s, transform .08s, border-color .12s;
+    caret-color: var(--mint);
+}
+
+
+input::placeholder {
+    color: rgba(229, 244, 227, 0.38)
+}
+
+
+input:focus {
+    box-shadow: 0 6px 22px rgba(34, 0, 124, 0.14);
+    border: 1px solid rgba(34, 0, 124, 0.65);
+    transform: translateY(-1px);
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px
+}
+
+
+.checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: rgba(229, 244, 227, 0.9)
+}
+
+
+.checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent-500)
+}
+
+
+.forgot {
+    color: rgba(229, 244, 227, 0.8);
+    text-decoration: none;
+    font-size: 13px
+}
+
+.forgot:hover {
+    text-decoration: underline
+}
+
+
+.btn {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 0;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    background: #FFFFFF;
+    color: var(--mint);
+    box-shadow: 0 10px 30px rgba(34, 0, 124, 0.22);
+    transition: transform .12s, box-shadow .12s, opacity .12s;
+}
+
+
+.btn:active {
+    transform: translateY(1px)
+}
+
+.btn:disabled {
+    opacity: .6;
+    cursor: not-allowed
+}
+
+
+.alt {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgba(229, 244, 227, 0.78)
+}
+
+
+.alt a {
+    color: var(--mint);
+    font-weight: 600;
+    text-decoration: none
+}
+
+
+/* small helper footer */
+.hint {
+    margin-top: 12px;
+    font-size: 12px;
+    color: rgba(229, 244, 227, 0.58);
+    text-align: center
+}
+
+
+/* responsive */
+@media (max-width:420px) {
+    .card {
+        padding: 20px;
+        border-radius: 12px
+    }
+
+    .logo {
+        width: 44px;
+        height: 44px
+    }
+}
