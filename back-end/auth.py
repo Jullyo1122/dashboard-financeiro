@@ -1,3 +1,5 @@
+#Para rodar: uvicorn auth:app --reload
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -36,4 +38,7 @@ def cadastro(dados: Cadastrar):
             return {"status": "erro", "mensagem": "CPF já cadastrado."}
         if user["email"] == dados.email:
             return {"status": "erro", "mensagem": "E-mail já cadastrado."}
+        
+    novo_id = max(db.keys()) + 1
+    db[novo_id] = {"nome": dados.nome,"cpf": dados.cpf, "email": dados.email, "senha": dados.senha}
     return {"status": "sucesso", "mensagem": "Cadastro realizado com sucesso!"}
